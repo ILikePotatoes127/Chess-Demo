@@ -4,7 +4,7 @@ class_name Piece
 
 @onready var button: TextureButton = $TextureButton
 
-var color:String 
+var color:String
 var index:Vector2
 var type:String
 var texture:CompressedTexture2D
