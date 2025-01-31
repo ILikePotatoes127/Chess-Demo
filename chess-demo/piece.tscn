@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://cnyuxxim7hyvd"]
+
+[ext_resource type="Script" path="res://piece.gd" id="1_1aleu"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_w6afn"]
+
+[node name="Piece" type="Node2D"]
+script = ExtResource("1_1aleu")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = SubResource("CompressedTexture2D_w6afn")
+
+[node name="TextureButton" type="TextureButton" parent="."]
+offset_left = -16.0
+offset_top = -16.0
+offset_right = 16.0
+offset_bottom = 16.0
+
+[connection signal="pressed" from="TextureButton" to="." method="_on_piece_pressed"]
